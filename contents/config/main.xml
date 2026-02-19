@@ -1,0 +1,26 @@
+<!DOCTYPE kcfg SYSTEM "kcfg.dtd">
+<kcfg>
+  <group name="General">
+    <entry name="instanceRegistryJson" type="String">
+      <default>{}</default>
+    </entry>
+    <entry name="nameMapJson" type="String">
+      <default>{}</default>
+    </entry>
+    <entry name="nextInstanceNumber" type="Int">
+      <default>1</default>
+    </entry>
+    <entry name="deviceFlagConfigsJson" type="String">
+      <default>{}</default>
+    </entry>
+    <entry name="templatesJson" type="String">
+      <default>[]</default>
+    </entry>
+    <entry name="expandedDevicesJson" type="String">
+      <default>{}</default>
+    </entry>
+    <entry name="createOpenDevicesJson" type="String">
+      <default>{}</default>
+    </entry>
+  </group>
+</kcfg>

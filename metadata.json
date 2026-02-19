@@ -1,0 +1,29 @@
+{
+  "KPlugin":
+  {
+    "Id": "org.kde.scrcpycontrol",
+    "Name": "scrcpy Control",
+    "Description": "Manage scrcpy instances per device (USB/Wi-Fi)",
+    "Description[ru]": "Управление инстансами scrcpy по устройствам (USB/Wi-Fi)",
+    "Description[uk]": "Керування інстансами scrcpy для пристроїв (USB/Wi-Fi)",
+    "Icon": "smartphone",
+    "Version": "1.0.0",
+    "License": "GPL-3.0-or-later",
+    "EnabledByDefault": true,
+    "FormFactors":
+    [
+      "desktop"
+    ],
+    "Authors":
+    [
+      {
+        "Name": "Yozh_In_Mist",
+        "Email": "appechenov@gmail.com"
+      }
+    ]
+  },
+  "KPackageStructure": "Plasma/Applet",
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "X-Plasma-NotificationArea": "true",
+  "X-Plasma-NotificationAreaCategory": "Hardware"
+}

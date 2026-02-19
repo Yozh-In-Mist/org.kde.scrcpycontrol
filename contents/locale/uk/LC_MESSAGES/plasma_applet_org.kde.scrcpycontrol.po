@@ -1,0 +1,302 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: org.kde.scrcpycontrol\n"
+"POT-Creation-Date: 2026-02-19 00:00+0000\n"
+"PO-Revision-Date: 2026-02-19 00:00+0000\n"
+"Last-Translator: ChatGPT\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "%1 instance(s) running"
+msgstr "Запущено інстансів: %1"
+
+msgid "1. Connect the phone with USB and accept the ADB authorization prompt.\n2. Select the USB device, set the TCP port, then click Enable and Detect IP.\n3. Disconnect USB, enter Host/IP and Port, then click Connect."
+msgstr "1. Підключіть телефон через USB та підтвердьте запит авторизації ADB.\n2. Виберіть USB-пристрій, задайте TCP-порт, потім натисніть «Увімкнути» та «Визначити IP».\n3. Від’єднайте USB, введіть Host/IP і Port, потім натисніть «Підключити»."
+
+msgid "ADB connect finished."
+msgstr "Підключення ADB завершено."
+
+msgid "ADB over Wi-Fi"
+msgstr "ADB через Wi-Fi"
+
+msgid "Additional Flags"
+msgstr "Додаткові прапорці"
+
+msgid "Any extra scrcpy flags (advanced)"
+msgstr "Будь-які додаткові прапорці scrcpy (для досвідчених)"
+
+msgid "Audio"
+msgstr "Аудіо"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Close instance"
+msgstr "Закрити інстанс"
+
+msgid "Connect"
+msgstr "Підключити"
+
+msgid "Connecting to %1..."
+msgstr "Підключення до %1…"
+
+msgid "Control"
+msgstr "Керування"
+
+msgid "Could not detect device IP."
+msgstr "Не вдалося визначити IP пристрою."
+
+msgid "Create a new instance"
+msgstr "Створити новий інстанс"
+
+msgid "Create a new template"
+msgstr "Створити новий шаблон"
+
+msgid "Create instance"
+msgstr "Створити інстанс"
+
+msgid "Create new instance"
+msgstr "Створити новий інстанс"
+
+msgid "Default"
+msgstr "За замовчуванням"
+
+msgid "Delete selected template"
+msgstr "Видалити вибраний шаблон"
+
+msgid "Delete template"
+msgstr "Видалити шаблон"
+
+msgid "Delete template “%1”?"
+msgstr "Видалити шаблон «%1»?"
+
+msgid "Detect IP"
+msgstr "Визначити IP"
+
+msgid "Detected device IP: %1"
+msgstr "IP пристрою: %1"
+
+msgid "Detecting device IP..."
+msgstr "Визначення IP пристрою…"
+
+msgid "Disable to add %1"
+msgstr "Вимкніть, щоб додати %1"
+
+msgid "Edit selected template"
+msgstr "Редагувати вибраний шаблон"
+
+msgid "Edit template"
+msgstr "Редагувати шаблон"
+
+msgid "Enable"
+msgstr "Увімкнути"
+
+msgid "Enabling TCP/IP mode..."
+msgstr "Увімкнення режиму TCP/IP…"
+
+msgid "Flag \"%1\" is not allowed here. Device selection is controlled by the widget UI."
+msgstr "Прапорець «%1» тут заборонено. Вибір пристрою керується інтерфейсом віджета."
+
+msgid "Help"
+msgstr "Довідка"
+
+msgid "Hide create form"
+msgstr "Сховати форму створення"
+
+msgid "Host / IP"
+msgstr "Хост / IP"
+
+msgid "Host/IP is required."
+msgstr "Потрібен Host/IP."
+
+msgid "Instance logs"
+msgstr "Журнали інстанса"
+
+msgid "Instance name (optional)"
+msgstr "Назва інстанса (необов’язково)"
+
+msgid "Instances without a detected device"
+msgstr "Інстанси без визначеного пристрою"
+
+msgid "Instructions"
+msgstr "Інструкція"
+
+msgid "Invalid Flags"
+msgstr "Некоректні прапорці"
+
+msgid "Invalid TCP port."
+msgstr "Некоректний TCP-порт."
+
+msgid "Invalid connect port."
+msgstr "Некоректний порт підключення."
+
+msgid "Invalid endpoint format."
+msgstr "Некоректний формат адреси."
+
+msgid "Loading help..."
+msgstr "Завантаження довідки…"
+
+msgid "Loading logs..."
+msgstr "Завантаження журналів…"
+
+msgid "Loading..."
+msgstr "Завантаження…"
+
+msgid "Logs are unavailable for this instance"
+msgstr "Журнали недоступні для цього інстанса"
+
+msgid "Logs are unavailable for this instance."
+msgstr "Журнали недоступні для цього інстанса."
+
+msgid "Missing dependencies"
+msgstr "Не вистачає залежностей"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "No devices detected"
+msgstr "Пристроїв не виявлено"
+
+msgid "No help output available."
+msgstr "Вивід довідки відсутній."
+
+msgid "No log output available."
+msgstr "Вивід журналів відсутній."
+
+msgid "No running instances."
+msgstr "Запущених інстансів немає."
+
+msgid "None"
+msgstr "Немає"
+
+msgid "Open ADB over Wi-Fi setup"
+msgstr "Відкрити налаштування ADB через Wi-Fi"
+
+msgid "Output"
+msgstr "Вивід"
+
+msgid "Outside"
+msgstr "Зовнішній"
+
+msgid "Please install: adb + scrcpy"
+msgstr "Встановіть: adb і scrcpy"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Refresh"
+msgstr "Оновити"
+
+msgid "Refresh devices and instances"
+msgstr "Оновити пристрої та інстанси"
+
+msgid "Rename"
+msgstr "Перейменувати"
+
+msgid "Rename instance"
+msgstr "Перейменувати інстанс"
+
+msgid "Save as device default"
+msgstr "Зберегти як типові для пристрою"
+
+msgid "Save current Additional Flags as a template"
+msgstr "Зберегти поточні «Додаткові прапорці» як шаблон"
+
+msgid "Save instance name"
+msgstr "Зберегти назву інстанса"
+
+msgid "Save name"
+msgstr "Зберегти назву"
+
+msgid "Saved device defaults."
+msgstr "Типові параметри пристрою збережено."
+
+msgid "Search devices and instances"
+msgstr "Пошук пристроїв та інстансів"
+
+msgid "Select a USB-connected device first."
+msgstr "Спочатку виберіть пристрій, підключений через USB."
+
+msgid "Select a template to fill Additional Flags"
+msgstr "Виберіть шаблон, щоб заповнити «Додаткові прапорці»"
+
+msgid "Show captured logs for this instance"
+msgstr "Показати зібрані журнали для цього інстанса"
+
+msgid "Show logs"
+msgstr "Показати журнали"
+
+msgid "Show scrcpy help"
+msgstr "Показати довідку scrcpy"
+
+msgid "Start"
+msgstr "Запустити"
+
+msgid "Start a new scrcpy instance for this device"
+msgstr "Запустити новий інстанс scrcpy для цього пристрою"
+
+msgid "Starting scrcpy..."
+msgstr "Запуск scrcpy…"
+
+msgid "Step 1: Enable TCP/IP mode on a USB-connected device."
+msgstr "Крок 1: увімкніть режим TCP/IP на пристрої, підключеному через USB."
+
+msgid "Step 2: Connect via TCP."
+msgstr "Крок 2: підключіться через TCP."
+
+msgid "TCP/IP mode updated."
+msgstr "Режим TCP/IP оновлено."
+
+msgid "Template name"
+msgstr "Назва шаблону"
+
+msgid "Templates"
+msgstr "Шаблони"
+
+msgid "Terminate this scrcpy process"
+msgstr "Завершити цей процес scrcpy"
+
+msgid "The provided flags are invalid."
+msgstr "Вказані прапорці некоректні."
+
+msgid "Trailing escape in flags input."
+msgstr "Зайвий символ екранування у введенні прапорців."
+
+msgid "USB"
+msgstr "USB"
+
+msgid "Unknown"
+msgstr "Невідомо"
+
+msgid "Unterminated quote in flags input."
+msgstr "Незакрита лапка у введенні прапорців."
+
+msgid "Use these options as default for this device"
+msgstr "Використовувати ці параметри як типові для цього пристрою"
+
+msgid "Video"
+msgstr "Відео"
+
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+msgid "Widget"
+msgstr "Віджет"
+
+msgid "Window"
+msgstr "Вікно"
+
+msgid "scrcpy Control"
+msgstr "scrcpy Control"
+
+msgid "scrcpy Control stores instance names and per-device options in widget configuration."
+msgstr "scrcpy Control зберігає назви інстансів і параметри для пристроїв у конфігурації віджета."
+
+msgid "scrcpy Help"
+msgstr "Довідка scrcpy"
