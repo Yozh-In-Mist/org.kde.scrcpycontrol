@@ -16,6 +16,7 @@ PlasmaComponents3.Frame {
     required property var plasmoidObj
 
     property string deviceSerial: ""
+    property string deviceConfigKey: deviceSerial
     property var defaults: ({})
 
     signal createRequested(string deviceSerial, string name, var args)
@@ -373,7 +374,7 @@ PlasmaComponents3.Frame {
                 onClicked: {
                     const extraArgs = root.validateAdditionalFlagsOrShowError();
                     if (extraArgs === null) return;
-                    root.saveDefaultsRequested(root.deviceSerial, root.buildDefaultsObj());
+                    root.saveDefaultsRequested(root.deviceConfigKey, root.buildDefaultsObj());
                 }
                 PlasmaComponents3.ToolTip { text: i18n("Use these options as default for this device") }
             }

@@ -42,6 +42,24 @@ function setDeviceFlags(plasmoid, map) {
     plasmoid.configuration.deviceFlagConfigsJson = safeJsonStringify(map, "{}");
 }
 
+function getTransportAliases(plasmoid) {
+    const aliases = safeJsonParse(plasmoid.configuration.transportAliasesJson, {});
+    return aliases && typeof aliases === "object" && !Array.isArray(aliases) ? aliases : {};
+}
+
+function setTransportAliases(plasmoid, aliases) {
+    plasmoid.configuration.transportAliasesJson = safeJsonStringify(aliases, "{}");
+}
+
+function getPreferredTransports(plasmoid) {
+    const preferred = safeJsonParse(plasmoid.configuration.preferredTransportsJson, {});
+    return preferred && typeof preferred === "object" && !Array.isArray(preferred) ? preferred : {};
+}
+
+function setPreferredTransports(plasmoid, preferred) {
+    plasmoid.configuration.preferredTransportsJson = safeJsonStringify(preferred, "{}");
+}
+
 function getTemplates(plasmoid) {
     const templates = safeJsonParse(plasmoid.configuration.templatesJson, []);
     return Array.isArray(templates) ? templates : [];
@@ -129,11 +147,56 @@ function extractSerialFromCmdline(cmdline) {
     return "";
 }
 
-// Infer transport type from serial format.
+// Infer the ADB transport from all serial forms used by USB, TCP/IP and mDNS.
 function inferConnTypeFromSerial(serial) {
     if (!serial) return "unknown";
-    if (/^\d{1,3}(\.\d{1,3}){3}:\d+$/.test(serial)) return "wifi";
+    if (/^emulator-\d+$/.test(serial)) return "emulator";
+    if (/^\[[^\]]+\]:\d+$/.test(serial)) return "wifi";
+    if (/^[A-Za-z0-9._-]+:\d+$/.test(serial)) return "wifi";
+    if (/\._adb(?:-tls)?-connect\._tcp\.?$/.test(serial)) return "wifi";
     return "usb";
+}
+
+// Wireless debugging mDNS serials embed the device serial before the service suffix.
+function stableIdFromMdnsSerial(serial) {
+    const match = /^adb-([A-Za-z0-9]+)-.+\._adb-tls-connect\._tcp\.?$/.exec(serial || "");
+    return match ? match[1] : "";
+}
+
+function stableDeviceId(serial, aliases) {
+    if (!serial) return "__UNKNOWN__";
+    const aliasMap = aliases && typeof aliases === "object" ? aliases : {};
+    if (aliasMap[serial] && String(aliasMap[serial]).length) return String(aliasMap[serial]);
+    return stableIdFromMdnsSerial(serial) || serial;
+}
+
+function isValidPort(value) {
+    if (!/^\d+$/.test(String(value || ""))) return false;
+    const port = Number(value);
+    return Number.isInteger(port) && port >= 1 && port <= 65535;
+}
+
+function parseEndpoint(value) {
+    const endpoint = String(value || "").trim();
+    let host = "";
+    let port = "";
+    let match = /^\[([^\]]+)\]:(\d+)$/.exec(endpoint);
+
+    if (match) {
+        host = "[" + match[1] + "]";
+        port = match[2];
+    } else {
+        match = /^([A-Za-z0-9._-]+):(\d+)$/.exec(endpoint);
+        if (match) {
+            host = match[1];
+            port = match[2];
+        }
+    }
+
+    if (!host.length || !isValidPort(port)) {
+        return { ok: false, endpoint: endpoint, host: "", port: "" };
+    }
+    return { ok: true, endpoint: host + ":" + String(Number(port)), host: host, port: String(Number(port)) };
 }
 
 // Return scrcpy flags while excluding device-selection flags.
@@ -204,15 +267,55 @@ function setCustomName(plasmoid, key, name) {
     setNameMap(plasmoid, map);
 }
 
-// Build device cards from ADB output for known online devices only.
-function buildDevicesFromAdb(deviceList) {
-    return (deviceList || [])
-    .filter(device => device && device.state === "device")
-    .map(device => ({
-        id: device.serial,
-        title: device.model ? device.model : device.serial,
-        icon: "smartphone"
-    }));
+function statePriority(state) {
+    if (state === "device") return 4;
+    if (state === "unauthorized") return 3;
+    if (state === "offline") return 2;
+    if (state === "no_permissions") return 1;
+    return 0;
+}
+
+// Group ADB transports into physical devices. Aliases are learned after identity checks.
+function buildDevicesFromAdb(deviceList, aliases) {
+    const grouped = {};
+    const order = [];
+
+    for (const device of (deviceList || [])) {
+        if (!device || !device.serial) continue;
+
+        const id = stableDeviceId(device.serial, aliases);
+        if (!grouped[id]) {
+            grouped[id] = {
+                id,
+                title: device.model || id,
+                icon: "smartphone",
+                state: device.state || "unknown",
+                transports: []
+            };
+            order.push(id);
+        }
+
+        const target = grouped[id];
+        if (!target.title.length || target.title === id) target.title = device.model || id;
+        if (statePriority(device.state) > statePriority(target.state)) target.state = device.state;
+        target.transports.push({
+            serial: device.serial,
+            type: inferConnTypeFromSerial(device.serial),
+            state: device.state || "unknown",
+            model: device.model || ""
+        });
+    }
+
+    return order.map(id => {
+        const device = grouped[id];
+        device.transports.sort((left, right) => {
+            if (left.state === "device" && right.state !== "device") return -1;
+            if (right.state === "device" && left.state !== "device") return 1;
+            const rank = { usb: 0, wifi: 1, emulator: 2, unknown: 3 };
+            return (rank[left.type] ?? 9) - (rank[right.type] ?? 9);
+        });
+        return device;
+    });
 }
 
 // Parse `adb devices -l` output and extract basic metadata.
@@ -220,13 +323,13 @@ function parseAdbDevicesList(stdout) {
     const devices = [];
     for (const rawLine of (stdout || "").split("\n")) {
         const line = rawLine.trim();
-        if (!line || line.startsWith("List of devices")) continue;
+        if (!line || line.startsWith("List of devices") || line.startsWith("*")) continue;
 
         const parts = line.split(/\s+/);
         if (parts.length < 2) continue;
 
         const serial = parts[0];
-        const state = parts[1];
+        const state = /^\S+\s+no permissions\b/.test(line) ? "no_permissions" : parts[1];
         let model = "";
 
         for (const part of parts.slice(2)) {
@@ -240,11 +343,11 @@ function parseAdbDevicesList(stdout) {
     return devices;
 }
 
-// Group instances by serial while preserving unknown-device entries.
-function groupInstancesByDevice(instances) {
+// Group instances by physical device while preserving unknown-device entries.
+function groupInstancesByDevice(instances, aliases) {
     const grouped = {};
     for (const instance of instances || []) {
-        const key = instance.serial || "__UNKNOWN__";
+        const key = stableDeviceId(instance.serial, aliases);
         if (!grouped[key]) grouped[key] = [];
         grouped[key].push(instance);
     }

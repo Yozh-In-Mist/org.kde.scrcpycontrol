@@ -7,8 +7,10 @@
     "Description[ru]": "Управление инстансами scrcpy по устройствам (USB/Wi-Fi)",
     "Description[uk]": "Керування інстансами scrcpy для пристроїв (USB/Wi-Fi)",
     "Icon": "smartphone",
-    "Version": "1.0.0",
+    "Version": "1.1.0",
     "License": "GPL-3.0-or-later",
+    "Website": "https://github.com/Yozh-In-Mist/org.kde.scrcpycontrol",
+    "BugReportUrl": "https://github.com/Yozh-In-Mist/org.kde.scrcpycontrol/issues",
     "EnabledByDefault": true,
     "FormFactors":
     [
