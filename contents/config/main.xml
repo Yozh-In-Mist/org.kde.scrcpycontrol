@@ -13,6 +13,12 @@
     <entry name="deviceFlagConfigsJson" type="String">
       <default>{}</default>
     </entry>
+    <entry name="transportAliasesJson" type="String">
+      <default>{}</default>
+    </entry>
+    <entry name="preferredTransportsJson" type="String">
+      <default>{}</default>
+    </entry>
     <entry name="templatesJson" type="String">
       <default>[]</default>
     </entry>

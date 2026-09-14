@@ -1,302 +1,631 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: org.kde.scrcpycontrol\n"
-"POT-Creation-Date: 2026-02-19 00:00+0000\n"
-"PO-Revision-Date: 2026-02-19 00:00+0000\n"
+"Project-Id-Version: org.kde.scrcpycontrol 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-11 18:19-0600\n"
+"PO-Revision-Date: 2026-09-12 00:00+0000\n"
 "Last-Translator: ChatGPT\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
-msgid "%1 instance(s) running"
-msgstr "Запущено инстансов: %1"
+#: contents/ui/DeviceCard.qml:88 contents/ui/main.qml:106
+msgid "%1 instance running"
+msgid_plural "%1 instances running"
+msgstr[0] "Запущен %1 инстанс"
+msgstr[1] "Запущено %1 инстанса"
+msgstr[2] "Запущено %1 инстансов"
 
-msgid "1. Connect the phone with USB and accept the ADB authorization prompt.\n2. Select the USB device, set the TCP port, then click Enable and Detect IP.\n3. Disconnect USB, enter Host/IP and Port, then click Connect."
-msgstr "1. Подключите телефон по USB и подтвердите запрос ADB.\n2. Выберите USB-устройство, задайте TCP-порт, затем нажмите «Включить» и «Определить IP».\n3. Отключите USB, введите Host/IP и Port, затем нажмите «Подключить»."
+#: contents/ui/DeviceCard.qml:79
+msgid "%1 — %2"
+msgstr "%1 — %2"
 
-msgid "ADB connect finished."
-msgstr "Подключение ADB завершено."
+#: contents/ui/WifiConnectionPage.qml:128
+msgid "192.168.1.20:37123"
+msgstr "192.168.1.20:37123"
 
-msgid "ADB over Wi-Fi"
-msgstr "ADB по Wi-Fi"
+#: contents/ui/main.qml:103
+msgid "A device needs attention"
+msgstr "Устройство требует внимания"
 
+#: contents/ui/main.qml:723
+msgid "ADB answered, but the device did not become available."
+msgstr "ADB ответил, но устройство не стало доступно."
+
+#: contents/ui/main.qml:722
+msgid "ADB could not connect to the device."
+msgstr "ADB не удалось подключиться к устройству."
+
+#: contents/ui/main.qml:711
+msgid "ADB restarted in USB mode. Keep the cable connected."
+msgstr "ADB перезапущен в режиме USB. Не отключайте кабель."
+
+#: contents/ui/main.qml:728
+msgid "ADB returned an unexpected result."
+msgstr "ADB вернул неожиданный результат."
+
+#: contents/ui/CreateInstanceRow.qml:137 contents/ui/CreateInstanceRow.qml:144
+#: contents/ui/CreateInstanceRow.qml:349 contents/ui/CreateInstanceRow.qml:355
 msgid "Additional Flags"
 msgstr "Дополнительные флаги"
 
+#: contents/ui/WifiConnectionPage.qml:222
+msgid "Advanced; the default is 5555"
+msgstr "Дополнительно; по умолчанию используется 5555"
+
+#: contents/ui/CreateInstanceRow.qml:365
 msgid "Any extra scrcpy flags (advanced)"
 msgstr "Любые дополнительные флаги scrcpy (для продвинутых)"
 
+#: contents/ui/CreateInstanceRow.qml:257
 msgid "Audio"
 msgstr "Аудио"
 
+#: contents/ui/DeviceCard.qml:84
+msgid "Authorization required on the phone"
+msgstr "Требуется авторизация на телефоне"
+
+#: contents/ui/main.qml:806 contents/ui/main.qml:808
 msgid "Back"
 msgstr "Назад"
 
+#: contents/ui/main.qml:876
 msgid "Close"
 msgstr "Закрыть"
 
+#: contents/ui/InstanceRow.qml:135
 msgid "Close instance"
 msgstr "Закрыть инстанс"
 
+#: contents/ui/WifiConnectionPage.qml:257
 msgid "Connect"
 msgstr "Подключить"
 
+#: contents/ui/main.qml:74 contents/ui/main.qml:829
+msgid "Connect a device"
+msgstr "Подключить устройство"
+
+#: contents/ui/main.qml:643
+msgid "Connect and select an authorized USB device first."
+msgstr "Сначала подключите и выберите авторизованное USB-устройство."
+
+#: contents/ui/main.qml:708
+msgid "Connected to %1 over Wi-Fi."
+msgstr "Установлено подключение к %1 по Wi-Fi."
+
+#: contents/ui/WifiConnectionPage.qml:280
+msgid "Connected wireless devices"
+msgstr "Подключённые беспроводные устройства"
+
+#: contents/ui/main.qml:672
 msgid "Connecting to %1..."
 msgstr "Подключение к %1…"
 
+#: contents/ui/DeviceCard.qml:159
+msgid "Connection"
+msgstr "Подключение"
+
+#: contents/ui/WifiConnectionPage.qml:87
+msgid "Connection method"
+msgstr "Способ подключения"
+
+#: contents/ui/CreateInstanceRow.qml:264
 msgid "Control"
 msgstr "Управление"
 
-msgid "Could not detect device IP."
-msgstr "Не удалось определить IP устройства."
+#: contents/ui/main.qml:725
+msgid "Could not disconnect the wireless device."
+msgstr "Не удалось отключить беспроводное устройство."
 
+#: contents/ui/main.qml:720
+msgid "Could not enable wireless ADB on the phone."
+msgstr "Не удалось включить беспроводной ADB на телефоне."
+
+#: contents/ui/main.qml:726
+msgid "Could not return ADB to USB mode."
+msgstr "Не удалось вернуть ADB в режим USB."
+
+#: contents/ui/main.qml:353
+msgid "Could not start scrcpy."
+msgstr "Не удалось запустить scrcpy."
+
+#: contents/ui/main.qml:360
+msgid "Could not stop the scrcpy instance."
+msgstr "Не удалось остановить инстанс scrcpy."
+
+#: contents/ui/DeviceCard.qml:134
 msgid "Create a new instance"
 msgstr "Создать новый инстанс"
 
+#: contents/ui/CreateInstanceRow.qml:327
 msgid "Create a new template"
 msgstr "Создать новый шаблон"
 
+#: contents/ui/CreateInstanceRow.qml:234
 msgid "Create instance"
 msgstr "Создать инстанс"
 
+#: contents/ui/DeviceCard.qml:133
 msgid "Create new instance"
 msgstr "Создать новый инстанс"
 
+#: contents/ui/InstanceRow.qml:37
 msgid "Default"
 msgstr "По умолчанию"
 
+#: contents/ui/CreateInstanceRow.qml:344
 msgid "Delete selected template"
 msgstr "Удалить выбранный шаблон"
 
+#: contents/ui/CreateInstanceRow.qml:205
 msgid "Delete template"
 msgstr "Удалить шаблон"
 
+#: contents/ui/CreateInstanceRow.qml:215
 msgid "Delete template “%1”?"
 msgstr "Удалить шаблон «%1»?"
 
-msgid "Detect IP"
-msgstr "Определить IP"
+#: contents/ui/main.qml:657
+msgid "Detecting the address and enabling wireless ADB..."
+msgstr "Определение адреса и включение беспроводного ADB…"
 
-msgid "Detected device IP: %1"
-msgstr "IP устройства: %1"
+#: contents/ui/DeviceCard.qml:85
+msgid "Device is offline"
+msgstr "Устройство не в сети"
 
-msgid "Detecting device IP..."
-msgstr "Определение IP устройства…"
+#: contents/ui/DeviceCard.qml:87
+msgid "Device is unavailable"
+msgstr "Устройство недоступно"
 
+#: contents/ui/CreateInstanceRow.qml:253 contents/ui/CreateInstanceRow.qml:260
+#: contents/ui/CreateInstanceRow.qml:267 contents/ui/CreateInstanceRow.qml:274
 msgid "Disable to add %1"
 msgstr "Отключите, чтобы добавить %1"
 
+#: contents/ui/WifiConnectionPage.qml:320
+msgid "Disconnect"
+msgstr "Отключить"
+
+#: contents/ui/main.qml:685
+msgid "Disconnecting %1..."
+msgstr "Отключение %1…"
+
+#: contents/ui/CreateInstanceRow.qml:337
 msgid "Edit selected template"
 msgstr "Редактировать выбранный шаблон"
 
+#: contents/ui/CreateInstanceRow.qml:114
 msgid "Edit template"
 msgstr "Редактировать шаблон"
 
-msgid "Enable"
-msgstr "Включить"
+#: contents/ui/DeviceCard.qml:74
+msgid "Emulator"
+msgstr "Эмулятор"
 
-msgid "Enabling TCP/IP mode..."
-msgstr "Включение режима TCP/IP…"
+#: contents/ui/main.qml:665
+msgid "Enter the connection address as host:port."
+msgstr "Введите адрес подключения в формате хост:порт."
 
-msgid "Flag \"%1\" is not allowed here. Device selection is controlled by the widget UI."
-msgstr "Флаг «%1» здесь запрещён. Выбор устройства управляется интерфейсом виджета."
+#: contents/ui/main.qml:627
+msgid "Enter the pairing address as host:port."
+msgstr "Введите адрес сопряжения в формате хост:порт."
 
+#: contents/ui/CreateInstanceRow.qml:43
+msgid ""
+"Flag \"%1\" is not allowed here. Device selection is controlled by the "
+"widget UI."
+msgstr ""
+"Флаг «%1» здесь запрещён. Выбор устройства управляется интерфейсом виджета."
+
+#: contents/ui/main.qml:845
 msgid "Help"
 msgstr "Справка"
 
+#: contents/ui/DeviceCard.qml:134
 msgid "Hide create form"
 msgstr "Скрыть форму создания"
 
-msgid "Host / IP"
-msgstr "Хост / IP"
+#: contents/ui/WifiConnectionPage.qml:332
+msgid "Hide technical details"
+msgstr "Скрыть технические подробности"
 
-msgid "Host/IP is required."
-msgstr "Требуется Host/IP."
+#: contents/ui/WifiConnectionPage.qml:252
+msgid "Host or IP:port"
+msgstr "Хост или IP:порт"
 
+#: contents/ui/main.qml:390 contents/ui/main.qml:763 contents/ui/main.qml:767
 msgid "Instance logs"
 msgstr "Логи инстанса"
 
+#: contents/ui/CreateInstanceRow.qml:240
 msgid "Instance name (optional)"
 msgstr "Имя инстанса (необязательно)"
 
+#: contents/ui/DeviceCard.qml:83
 msgid "Instances without a detected device"
 msgstr "Инстансы без определённого устройства"
 
-msgid "Instructions"
-msgstr "Инструкция"
-
+#: contents/ui/CreateInstanceRow.qml:178
 msgid "Invalid Flags"
 msgstr "Некорректные флаги"
 
-msgid "Invalid TCP port."
-msgstr "Некорректный TCP-порт."
+#: contents/ui/WifiConnectionPage.qml:182
+msgid ""
+"Keep the authorized USB cable connected. The widget will detect the phone "
+"address, restart ADB in TCP/IP mode, connect and verify the result."
+msgstr ""
+"Не отключайте авторизованный USB-кабель. Виджет определит адрес телефона, "
+"перезапустит ADB в режиме TCP/IP, подключится и проверит результат."
 
-msgid "Invalid connect port."
-msgstr "Некорректный порт подключения."
-
-msgid "Invalid endpoint format."
-msgstr "Некорректный формат адреса."
-
+#: contents/ui/main.qml:753
 msgid "Loading help..."
 msgstr "Загрузка справки…"
 
+#: contents/ui/main.qml:763
 msgid "Loading logs..."
 msgstr "Загрузка логов…"
 
+#: contents/ui/main.qml:1000
 msgid "Loading..."
 msgstr "Загрузка…"
 
+#: contents/ui/InstanceRow.qml:129
 msgid "Logs are unavailable for this instance"
 msgstr "Логи недоступны для этого инстанса"
 
+#: contents/ui/main.qml:759
 msgid "Logs are unavailable for this instance."
 msgstr "Логи недоступны для этого инстанса."
 
+#: contents/ui/WifiConnectionPage.qml:97
+msgid "Manual connection"
+msgstr "Ручное подключение"
+
+#: contents/ui/main.qml:102 contents/ui/main.qml:902
 msgid "Missing dependencies"
 msgstr "Не хватает зависимостей"
 
+#: contents/ui/CreateInstanceRow.qml:133
 msgid "Name"
 msgstr "Имя"
 
+#: contents/ui/DeviceCard.qml:86
+msgid "No USB permissions for this device"
+msgstr "Нет прав доступа к USB-устройству"
+
+#: contents/ui/main.qml:719
+msgid "No active Wi-Fi IPv4 address was found on the phone."
+msgstr "На телефоне не найден активный IPv4-адрес Wi-Fi."
+
+#: contents/ui/WifiConnectionPage.qml:190
+msgid ""
+"No authorized USB device is available. Connect the phone and accept its USB "
+"debugging prompt."
+msgstr ""
+"Нет доступного авторизованного USB-устройства. Подключите телефон и "
+"подтвердите запрос отладки по USB."
+
+#: contents/ui/main.qml:679 contents/ui/main.qml:692
+msgid "No connected wireless device is selected."
+msgstr "Не выбрано подключённое беспроводное устройство."
+
+#: contents/ui/main.qml:104
 msgid "No devices detected"
 msgstr "Устройства не обнаружены"
 
+#: contents/ui/main.qml:385
 msgid "No help output available."
 msgstr "Вывод справки отсутствует."
 
+#: contents/ui/main.qml:391
 msgid "No log output available."
 msgstr "Вывод логов отсутствует."
 
+#: contents/ui/DeviceCard.qml:227 contents/ui/main.qml:105
 msgid "No running instances."
 msgstr "Запущенных инстансов нет."
 
+#: contents/ui/WifiConnectionPage.qml:289
+msgid "No wireless ADB device is currently online."
+msgstr "Сейчас нет доступных беспроводных ADB-устройств."
+
+#: contents/ui/CreateInstanceRow.qml:299
 msgid "None"
 msgstr "Нет"
 
-msgid "Open ADB over Wi-Fi setup"
-msgstr "Открыть настройку ADB по Wi-Fi"
+#: contents/ui/WifiConnectionPage.qml:116
+msgid ""
+"On the phone, open Developer options → Wireless debugging → Pair device with "
+"pairing code. Enter the shown IP address and pairing port below."
+msgstr ""
+"На телефоне откройте «Для разработчиков» → «Отладка по Wi-Fi» → «Подключить "
+"устройство с помощью кода». Ниже введите показанные IP-адрес и порт "
+"сопряжения."
 
+#: contents/ui/main.qml:712
+msgid "Operation completed."
+msgstr "Операция завершена."
+
+#: contents/ui/main.qml:75 contents/ui/main.qml:285
 msgid "Output"
 msgstr "Вывод"
 
+#: contents/ui/InstanceRow.qml:101
 msgid "Outside"
 msgstr "Внешний"
 
-msgid "Please install: adb + scrcpy"
-msgstr "Установите: adb и scrcpy"
+#: contents/ui/WifiConnectionPage.qml:156
+msgid "Pair"
+msgstr "Сопрячь"
 
+#: contents/ui/main.qml:831
+msgid "Pair or connect a wireless ADB device"
+msgstr "Сопрячь или подключить беспроводное ADB-устройство"
+
+#: contents/ui/WifiConnectionPage.qml:120
+msgid "Pairing address"
+msgstr "Адрес сопряжения"
+
+#: contents/ui/WifiConnectionPage.qml:147
+msgid "Pairing code"
+msgstr "Код сопряжения"
+
+#: contents/ui/main.qml:721
+msgid "Pairing failed. Check the address and request a new code."
+msgstr "Сопряжение не удалось. Проверьте адрес и запросите новый код."
+
+#: contents/ui/WifiConnectionPage.qml:171
+msgid ""
+"Pairing is normally needed only once. Android should connect automatically "
+"afterwards; if it does not, use Manual connection with the address shown on "
+"the main Wireless debugging screen."
+msgstr ""
+"Обычно сопряжение требуется только один раз. После него Android должен "
+"подключиться автоматически; если этого не произошло, выберите ручное "
+"подключение и введите адрес с главного экрана отладки по Wi-Fi."
+
+#: contents/ui/main.qml:705
+msgid ""
+"Pairing succeeded. The device should connect automatically; use Manual "
+"connection if it does not appear."
+msgstr ""
+"Сопряжение выполнено. Устройство должно подключиться автоматически; если оно "
+"не появилось, используйте ручное подключение."
+
+#: contents/ui/main.qml:637
+msgid "Pairing with %1..."
+msgstr "Сопряжение с %1…"
+
+#: contents/ui/main.qml:906
+msgid "Please install: adb + scrcpy + coreutils"
+msgstr "Установите: adb, scrcpy и coreutils"
+
+#: contents/ui/WifiConnectionPage.qml:215
 msgid "Port"
 msgstr "Порт"
 
+#: contents/ui/main.qml:837
 msgid "Refresh"
 msgstr "Обновить"
 
+#: contents/ui/main.qml:839
 msgid "Refresh devices and instances"
 msgstr "Обновить устройства и инстансы"
 
+#: contents/ui/InstanceRow.qml:109
 msgid "Rename"
 msgstr "Переименовать"
 
+#: contents/ui/InstanceRow.qml:117
 msgid "Rename instance"
 msgstr "Переименовать инстанс"
 
+#: contents/ui/main.qml:698
+msgid "Restarting ADB in USB mode..."
+msgstr "Перезапуск ADB в режиме USB…"
+
+#: contents/ui/WifiConnectionPage.qml:316
+msgid "Restarts ADB in USB mode; keep the cable connected"
+msgstr "Перезапускает ADB в режиме USB; не отключайте кабель"
+
+#: contents/ui/WifiConnectionPage.qml:313
+msgid "Return to USB mode"
+msgstr "Вернуть режим USB"
+
+#: contents/ui/CreateInstanceRow.qml:372
 msgid "Save as device default"
 msgstr "Сохранить как настройки устройства"
 
+#: contents/ui/CreateInstanceRow.qml:321
 msgid "Save current Additional Flags as a template"
 msgstr "Сохранить текущие «Дополнительные флаги» как шаблон"
 
+#: contents/ui/InstanceRow.qml:117
 msgid "Save instance name"
 msgstr "Сохранить имя инстанса"
 
+#: contents/ui/InstanceRow.qml:109
 msgid "Save name"
 msgstr "Сохранить имя"
 
+#: contents/ui/main.qml:576
 msgid "Saved device defaults."
 msgstr "Настройки устройства сохранены."
 
+#: contents/ui/main.qml:821
 msgid "Search devices and instances"
 msgstr "Поиск устройств и инстансов"
 
-msgid "Select a USB-connected device first."
-msgstr "Сначала выберите USB-подключённое устройство."
-
+#: contents/ui/CreateInstanceRow.qml:315
 msgid "Select a template to fill Additional Flags"
 msgstr "Выберите шаблон, чтобы заполнить «Дополнительные флаги»"
 
+#: contents/ui/WifiConnectionPage.qml:228
+msgid "Set up Wi-Fi"
+msgstr "Настроить Wi-Fi"
+
+#: contents/ui/WifiConnectionPage.qml:96
+msgid "Set up through USB"
+msgstr "Настройка через USB"
+
+#: contents/ui/InstanceRow.qml:128
 msgid "Show captured logs for this instance"
 msgstr "Показать захваченные логи этого инстанса"
 
+#: contents/ui/InstanceRow.qml:123
 msgid "Show logs"
 msgstr "Показать логи"
 
+#: contents/ui/main.qml:847
 msgid "Show scrcpy help"
 msgstr "Показать справку scrcpy"
 
+#: contents/ui/WifiConnectionPage.qml:332
+msgid "Show technical details"
+msgstr "Показать технические подробности"
+
+#: contents/ui/WifiConnectionPage.qml:133
+msgid "Six-digit pairing code"
+msgstr "Шестизначный код сопряжения"
+
+#: contents/ui/CreateInstanceRow.qml:385
 msgid "Start"
 msgstr "Запустить"
 
+#: contents/ui/CreateInstanceRow.qml:392
 msgid "Start a new scrcpy instance for this device"
 msgstr "Запустить новый инстанс scrcpy для этого устройства"
 
+#: contents/ui/main.qml:584
 msgid "Starting scrcpy..."
 msgstr "Запуск scrcpy…"
 
-msgid "Step 1: Enable TCP/IP mode on a USB-connected device."
-msgstr "Шаг 1: включите режим TCP/IP на устройстве, подключённом по USB."
-
-msgid "Step 2: Connect via TCP."
-msgstr "Шаг 2: подключитесь по TCP."
-
-msgid "TCP/IP mode updated."
-msgstr "Режим TCP/IP обновлён."
-
+#: contents/ui/CreateInstanceRow.qml:126
 msgid "Template name"
 msgstr "Имя шаблона"
 
+#: contents/ui/CreateInstanceRow.qml:283
 msgid "Templates"
 msgstr "Шаблоны"
 
+#: contents/ui/InstanceRow.qml:139
 msgid "Terminate this scrcpy process"
 msgstr "Завершить этот процесс scrcpy"
 
+#: contents/ui/main.qml:727 contents/ui/main.qml:730
+msgid "The ADB operation failed."
+msgstr "Операция ADB завершилась с ошибкой."
+
+#: contents/ui/main.qml:724 contents/ui/main.qml:779
+msgid "The ADB operation timed out."
+msgstr "Истекло время ожидания операции ADB."
+
+#: contents/ui/main.qml:716
+msgid "The address or port is invalid."
+msgstr "Некорректный адрес или порт."
+
+#: contents/ui/main.qml:779
+msgid ""
+"The command may still finish in the background. Refresh the device list "
+"before trying again."
+msgstr ""
+"Команда всё ещё может завершиться в фоне. Обновите список устройств перед "
+"повторной попыткой."
+
+#: contents/ui/main.qml:631 contents/ui/main.qml:717
+msgid "The pairing code must contain six digits."
+msgstr "Код сопряжения должен содержать шесть цифр."
+
+#: contents/ui/main.qml:648
+msgid "The port must be from 1 to 65535."
+msgstr "Порт должен быть в диапазоне от 1 до 65535."
+
+#: contents/ui/CreateInstanceRow.qml:45 contents/ui/CreateInstanceRow.qml:190
 msgid "The provided flags are invalid."
 msgstr "Указанные флаги некорректны."
 
+#: contents/ui/main.qml:718
+msgid "The selected device is no longer online or authorized."
+msgstr "Выбранное устройство больше не доступно или не авторизовано."
+
+#: contents/ui/CreateInstanceRow.qml:40
 msgid "Trailing escape in flags input."
 msgstr "Лишний символ экранирования в вводе флагов."
 
+#: contents/ui/DeviceCard.qml:73 contents/ui/InstanceRow.qml:32
 msgid "USB"
 msgstr "USB"
 
+#: contents/ui/DeviceCard.qml:71 contents/ui/DeviceCard.qml:75
+#: contents/ui/InstanceRow.qml:33 contents/ui/main.qml:519
 msgid "Unknown"
 msgstr "Неизвестно"
 
+#: contents/ui/CreateInstanceRow.qml:41
 msgid "Unterminated quote in flags input."
 msgstr "Незакрытая кавычка в вводе флагов."
 
+#: contents/ui/WifiConnectionPage.qml:270
+msgid ""
+"Use legacy ADB over TCP/IP only on a trusted network. Guest Wi-Fi, access-"
+"point isolation, firewalls and VPNs may prevent the connection."
+msgstr ""
+"Используйте устаревший ADB по TCP/IP только в доверенной сети. Гостевой Wi-"
+"Fi, изоляция клиентов, межсетевые экраны и VPN могут препятствовать "
+"подключению."
+
+#: contents/ui/WifiConnectionPage.qml:242
+msgid ""
+"Use the connection address from Wireless debugging, or an existing legacy "
+"ADB TCP/IP endpoint."
+msgstr ""
+"Используйте адрес подключения из отладки по Wi-Fi или существующий адрес "
+"устаревшего ADB TCP/IP."
+
+#: contents/ui/CreateInstanceRow.qml:379
 msgid "Use these options as default for this device"
 msgstr "Использовать эти параметры по умолчанию для этого устройства"
 
+#: contents/ui/CreateInstanceRow.qml:250
 msgid "Video"
 msgstr "Видео"
 
+#: contents/ui/DeviceCard.qml:72 contents/ui/InstanceRow.qml:31
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
+#: contents/ui/InstanceRow.qml:101
 msgid "Widget"
 msgstr "Виджет"
 
+#: contents/ui/CreateInstanceRow.qml:271
 msgid "Window"
 msgstr "Окно"
 
+#: contents/ui/WifiConnectionPage.qml:95
+msgid "Wireless debugging (Android 11+)"
+msgstr "Беспроводная отладка (Android 11+)"
+
+#: contents/ui/main.qml:710
+msgid "Wireless device disconnected."
+msgstr "Беспроводное устройство отключено."
+
+#: contents/ui/main.qml:76 contents/ui/main.qml:100
 msgid "scrcpy Control"
 msgstr "scrcpy Control"
 
-msgid "scrcpy Control stores instance names and per-device options in widget configuration."
-msgstr "scrcpy Control хранит имена инстансов и параметры по устройствам в конфигурации виджета."
+#: contents/config/config.qml:8
+msgid ""
+"scrcpy Control stores instance names and per-device options in widget "
+"configuration."
+msgstr ""
+"scrcpy Control хранит имена инстансов и параметры по устройствам в "
+"конфигурации виджета."
 
+#: contents/ui/main.qml:385 contents/ui/main.qml:753
 msgid "scrcpy Help"
 msgstr "Справка scrcpy"
